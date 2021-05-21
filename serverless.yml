@@ -1,0 +1,57 @@
+service: sistema-de-cadastro-de-tarefas
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+  memorySize: 256
+  timeout: 3
+  
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+
+  cadastrarTarefa:
+    handler: src/main/lambda/tarefas/cadastrar.handler
+    events:
+      - http:
+          path: cadastrar
+          method: post
+
+  listarTarefa:
+    handler: src/main/lambda/tarefas/listar.handler
+    events:
+      - http:
+          path: listar
+          method: get
+
+  listarPorIdTarefa:
+    handler: src/main/lambda/tarefas/listar-por-id-tarefa.handler
+    events:
+      - http:
+          path: listar/{tarefa}
+          method: get
+
+  editarTarefa:
+    handler: src/main/lambda/tarefas/editar.handler
+    events:
+      - http:
+          path: editar/{tarefa}
+          method: put
+
+  finalizarTarefa:
+    handler: src/main/lambda/tarefas/finalizar.handler
+    events:
+      - http:
+          path: finalizar/{tarefa}
+          method: patch
+
+  excluirTarefa:
+    handler: src/main/lambda/tarefas/excluir.handler
+    events:
+      - http:
+          path: excluir/{tarefa}
+          method: get
+  

@@ -1,0 +1,5 @@
+export { CadastrarController } from "@/presentation/controller/tarefas/cadastrar-controller"
+export { EditarController } from "@/presentation/controller/tarefas/editar-controller"
+export { ExcluirController } from "@/presentation/controller/tarefas/excluir-controller"
+export { ListarController } from "@/presentation/controller/tarefas/listar-controller"
+export { ListarPorIdController } from "@/presentation/controller/tarefas/listarPorId-controller"

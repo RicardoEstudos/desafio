@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListarPorIdController = exports.ListarController = exports.ExcluirController = exports.EditarController = exports.CadastrarController = void 0;
+var cadastrar_controller_1 = require("@/presentation/controller/tarefas/cadastrar-controller");
+Object.defineProperty(exports, "CadastrarController", { enumerable: true, get: function () { return cadastrar_controller_1.CadastrarController; } });
+var editar_controller_1 = require("@/presentation/controller/tarefas/editar-controller");
+Object.defineProperty(exports, "EditarController", { enumerable: true, get: function () { return editar_controller_1.EditarController; } });
+var excluir_controller_1 = require("@/presentation/controller/tarefas/excluir-controller");
+Object.defineProperty(exports, "ExcluirController", { enumerable: true, get: function () { return excluir_controller_1.ExcluirController; } });
+var listar_controller_1 = require("@/presentation/controller/tarefas/listar-controller");
+Object.defineProperty(exports, "ListarController", { enumerable: true, get: function () { return listar_controller_1.ListarController; } });
+var listarPorId_controller_1 = require("@/presentation/controller/tarefas/listarPorId-controller");
+Object.defineProperty(exports, "ListarPorIdController", { enumerable: true, get: function () { return listarPorId_controller_1.ListarPorIdController; } });
